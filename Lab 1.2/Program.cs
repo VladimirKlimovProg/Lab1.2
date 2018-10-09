@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab_1._2
 {
@@ -24,14 +20,14 @@ namespace Lab_1._2
                 }
                 else
                 {
-                    bool result = (x * x + y * y <= 1) && x >= 0;
+                    bool result = (x * x + y * y <= 1) && !(x < 0 && y < 0);
                     if (result)
                     {
                         Console.WriteLine($"Точка ({x}, {y}) принадлежит требуемой области");
                     }
                     else
                     {
-                        Console.WriteLine($"Точка ({x}, {y}) находится за пределами требуемой области");
+                        Console.WriteLine($"Точка ({x}, {y}) не принадлежит требуемой области");
                     }
                 }
                 
